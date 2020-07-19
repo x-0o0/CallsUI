@@ -2,21 +2,20 @@
 import SwiftUI
 import ElViewKit
 
-@available(iOS 13.0.0, *)
-struct SwiftUIView: View {
-    @State var remoteMuted: Bool = true
-    @State var localMuted: Bool = false
-    @State var localSpeaker: Bool = false
-    @State var duration: Int = 34
+public struct CallView: View {
+    @State public var remoteMuted: Bool = true
+    @State public var localMuted: Bool = false
+    @State public var localSpeaker: Bool = false
+    @State public var duration: Int = 0
     
-    let username: String
-    let profileURL: String
+    public let username: String
+    public let profileURL: String
     
-    let onSpeaker: () -> ()
-    let onMuted: () -> ()
-    let onEnded: () -> ()
+    public let onSpeaker: () -> ()
+    public let onMuted: () -> ()
+    public let onEnded: () -> ()
     
-    var body: some View {
+    public var body: some View {
         VStack {
             HStack(alignment: .top) {
                 // Profile URL Image

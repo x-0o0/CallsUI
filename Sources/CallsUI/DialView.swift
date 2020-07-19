@@ -1,19 +1,19 @@
 import SwiftUI
 
-struct DialView: View {
-    typealias Completion = () -> Void
+public struct DialView: View {
+    public typealias Completion = () -> Void
     
-    @State var userID: String = ""
-    @State var abledToDial: Bool = false
-    @State var showError: Bool = false
-    @State var audioEnable: Bool = true
-    @State var videoEnable: Bool = true
+    @State public var userID: String = ""
+    @State public var abledToDial: Bool = false
+    @State public var showError: Bool = false
+    @State public var audioEnable: Bool = true
+    @State public var videoEnable: Bool = true
     
-    let onRequestVoiceCall: Completion?
-    let onRequestVideoCall: Completion?
+    public let onRequestVoiceCall: Completion?
+    public let onRequestVideoCall: Completion?
     
     
-    var body: some View {
+    public var body: some View {
         VStack {
             Divider()
             
@@ -79,7 +79,7 @@ struct DialView: View {
         }
     }
     
-    func enableDial() {
+    private func enableDial() {
         abledToDial = !userID.trimmingCharacters(in: .whitespaces).isEmpty
     }
 }
