@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ElViewKit",
+        "repositoryURL": "https://github.com/Swift-at-Night/ElViewKit",
+        "state": {
+          "branch": null,
+          "revision": "cb1935687f8f88778161ccf3949abc436b4bea0b",
+          "version": "0.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
